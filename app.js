@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+// import express from "express";
+var express = require("express");
+// import bodyParser from "body-parser";
+var bodyParser = require("body-parser");
+var todos_1 = require("./routes/todos");
+var app = express();
+app.use(bodyParser.json());
+app.use(todos_1["default"]);
+app.listen(3000);
